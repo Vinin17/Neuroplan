@@ -319,7 +319,7 @@
     if (!etapa1 || !etapa2) return;
 
     const reduzir = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const irParaHoje = () => window.location.replace("hoje.html");
+    const irParaHoje = () => window.location.replace("index.html");
 
     setTimeout(() => {
       etapa1.classList.remove("is-ativa");
@@ -332,7 +332,7 @@
 
 
   /* =========================================================
-     HOJE (hoje.html)
+     HOJE (index.html)
      ========================================================= */
   function iniciarHoje() {
     const listaHoje = $("#lista-hoje");
@@ -510,7 +510,7 @@
     }
 
     // Depois de salvar/excluir: hoje -> Hoje; outro dia -> Rotina naquele dia
-    const destinoApos = (iso) => (iso === hojeISO() ? "hoje.html" : "rotina.html?data=" + iso);
+    const destinoApos = (iso) => (iso === hojeISO() ? "index.html" : "rotina.html?data=" + iso);
 
     function limparErros() {
       $$(".campo__erro", form).forEach((el) => el.remove());
